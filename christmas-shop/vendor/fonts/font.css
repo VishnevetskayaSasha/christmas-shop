@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("./Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Allura";
+    src: url("../fonts/Allura/Allura-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
