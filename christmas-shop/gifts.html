@@ -16,24 +16,26 @@
     <header class="header">
       <div class="wrapper">
         <div class="header__content">
-          <div class="header__logo-content">
-            <img class="header__logo" src="./img/snowflake.svg" alt="logo">
-            <p class="header__title">the gifts</p>
-          </div>
+          <a href="index.html" class="header__logo-link">
+            <div class="header__logo-content">
+              <img class="header__logo" src="./img/snowflake.svg" alt="logo">
+              <p class="header__title">the gifts</p>
+            </div>
+          </a>
           <div class="header__menu-content">
             <nav class="header__menu">
               <ul class="header__menu-list">
-                <li class="header__menu-item">
-                  <a href="#" class="header__menu-link">gifts</a>
+                <li class="header__menu-item header__menu-item_active">
+                  <a href="#" class="header__menu-link header__menu-link_active">gifts</a>
                 </li>
                 <li class="header__menu-item">
-                  <a href="#" class="header__menu-link">about</a>
+                  <a href="index.html#about" class="header__menu-link">about</a>
                 </li>
                 <li class="header__menu-item">
-                  <a href="#" class="header__menu-link">best</a>
+                  <a href="index.html#best" class="header__menu-link">best</a>
                 </li>
                 <li class="header__menu-item">
-                  <a href="#" class="header__menu-link">contacts</a>
+                  <a href="#contacts" class="header__menu-link">contacts</a>
                 </li>
               </ul>
               </nav>
@@ -50,7 +52,7 @@
       <div class="bg__red">
         <div class="wrapper">
           <div class="gifts__tag-content">
-            <p class="gifts__tag-item">All</p>
+            <p class="gifts__tag-item gifts__tag-item_active">All</p>
             <p class="gifts__tag-item">for work</p>
             <p class="gifts__tag-item">for health</p>
             <p class="gifts__tag-item">for harmony</p>
@@ -146,7 +148,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="wrapper">
         <div class="footer__contact-us footer__contact-us_gifts">
           <div class="footer__contact-item">
@@ -186,7 +188,7 @@
           </a>
         </div>
         <p class="footer__copy">© Copyright 2025, All Rights Reserved</p>
-        <h2 class="caption footer__title">Made in Rolling Scopes School</h2>
+        <a class="footer__title-link" target="_blank" href="https://rs.school/"><h2 class="caption footer__title">Made in Rolling Scopes School</h2></a>
       </div>
     </footer>
   </div>

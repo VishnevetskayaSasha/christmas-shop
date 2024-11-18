@@ -1,6 +1,9 @@
 /* @import url(./vendor/fonts/font.css); */
 @import url(./vendor/normalize.css);
 
+html {
+  scroll-behavior: smooth;
+}
 
 .page {
   font-family: 'Montserrat', sans-serif;
@@ -49,6 +52,7 @@
 }
 .header__menu-item {
   padding: 10px 20px 12px;
+
 }
 .header__menu-link {
   font-size: 12px;
@@ -108,6 +112,8 @@
   border: none;
   border-radius: 20px;
   display: block;
+  width: 172px;
+  text-decoration: none;
 }
 .hero__button {
   margin: 0 auto 12px;
@@ -407,8 +413,6 @@
   row-gap: 12px;
   padding-bottom: 60px;
 }
-.main-gifts {
-}
 .bg__garland {
   background-image: url(./img/bg-garland.png);
   background-color: #FF4646;
@@ -453,4 +457,81 @@
 }
 .footer__contact-us_gifts{
   margin: 59px auto 60px;
+}
+.header__menu-item_active{
+  background-color:  rgba(255, 70, 70, 0.1);
+  border-radius: 12px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.header__menu-link_active{
+  color: #FF4646;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.header__logo-link{
+  text-decoration: none;
+  color: #181C29;
+}
+.gifts__tag-item:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: .5s linear;
+}
+.gifts__tag-item_active{
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.header__menu-item:hover{
+  background-color:  rgba(255, 70, 70, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .5s linear;
+}
+.header__menu-item:hover .header__menu-link{
+  color: #FF4646;
+  transition: .5s linear;
+}
+.button:hover{
+  background-color:#FFFFFF;
+  color:  #181C29;
+  transition: .5s linear;
+}
+.slider__row_active{
+  background-image: url(./img/Vector-active.png);
+  border: 1px solid #FFFFFF;
+}
+.slider__row:hover{
+  background-color: #FFFFFF; 
+  cursor: pointer;
+  transition: .2s linear;
+}
+.slider__row-right:hover{
+  background-image: url(./img/arrow-right-red.png);
+}
+.slider__row-left:hover{
+  background-image: url(./img/arrow-right-red.png);
+  transform: rotate(180deg);
+}
+.gifts__card:hover .gifts__card-text{
+  color: #FF4646;
+  transition: .5s linear;
+}
+.gifts__card:hover{
+  cursor: pointer;
+}
+.footer__contact-item:hover .footer__contact-inf{
+  color: #FF4646;
+  transition: .6s linear;
+}
+.footer__contact-item:hover .footer__contact-text{
+  color: #FF4646;
+  transition: .5s linear;
+}
+.footer__title-link{
+  text-decoration: none;
+  color: #181C29;
 }
