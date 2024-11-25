@@ -129,6 +129,9 @@ html {
   background-color: #FF4646;
   padding: 56px 0 60px;
 }
+.about{
+  margin-top: -1px;
+}
 .about__content {
   display: flex;
   justify-content: space-between;
@@ -292,6 +295,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 20px 20px;
+  margin-top: -1px;
 }
 .bg__forest {
   background-image: url(./img/bg-forest.png);
@@ -635,5 +639,25 @@ html {
   .footer__contact-item{
     width: 100%;
     padding: 19px 0 20px;
+  }
+}
+@media screen and (max-width: 710px){
+  .about__content{
+    flex-direction: column;
+  }
+  .about__text-content{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .about__text{
+    margin: 20px 0 59px;
+  }
+  .about__img-content{
+    height: 528px;
+  }
+}
+@media screen and (max-width: 440px){
+  .cta__text-content{
+    width: 364px;
   }
 }
