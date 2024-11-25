@@ -608,6 +608,12 @@ html {
     background-position: center;
     border-radius: 0;
   }
+  .bg__garland{
+    height: 108px;
+  }
+  .bg__red{
+    padding-top: 116px;
+  }
 }
 @media screen and (max-width: 768px){
   .header__menu{
@@ -656,8 +662,22 @@ html {
     height: 528px;
   }
 }
+@media screen and (max-width: 480px){
+  .gifts__tag-item{
+    padding: 12px 8px;
+  }
+}
 @media screen and (max-width: 440px){
   .cta__text-content{
     width: 364px;
+  }
+  .bg__garland {
+    height: 53px;
+  }
+  .bg__red {
+    padding-top: 267px;
+  }
+  .gifts__tag-content{
+    max-width: 354px;
   }
 }
