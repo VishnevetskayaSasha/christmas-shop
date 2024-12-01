@@ -1,48 +1,59 @@
-const hamburger = document.querySelector(".hamburger");
-const hamburgerBlock = document.querySelector(".hamburger__block");
-const menu = document.querySelector(".header__menu");
-const menuList = menu.querySelector("ul");
-const menuItem = menuList.querySelectorAll("li");
-const menuLink = menuList.querySelectorAll("a");
+import { giftCards } from "./giftsCards.js";
+import burgerMenu from "./modules/burger.js";
 
+burgerMenu();
 
-// клик на бургер открывает - закрывает меню
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("hamburger_open");
-  hamburgerBlock.classList.toggle("hamburger__block_open");
-  menuList.classList.toggle("header__menu-list_mob-activ");
-  menuItem.forEach(item => {
-    item.classList.toggle("header__menu-item_mob")
-  })
-  menuLink.forEach(item => {
-    item.classList.toggle("header__menu-link_mob")
-  })
-  document.body.classList.toggle("lock");
-})
-// клик на ссылку в открытом меню - закрывает меню
-menuLink.forEach(item => {
-  item.addEventListener("click", () => {
-    hamburger.classList.remove("hamburger_open");
-    hamburgerBlock.classList.remove("hamburger__block_open");
-    menuList.classList.remove("header__menu-list_mob-activ");
-    menuItem.forEach(item => {
-      item.classList.remove("header__menu-item_mob")
-    })
-    menuLink.forEach(item => {
-      item.classList.remove("header__menu-link_mob")
-    })
-    document.body.classList.remove("lock");
-  })
-})
-document.querySelector(".header__menu-item_active").addEventListener("click", () => {
-  hamburger.classList.remove("hamburger_open");
-    hamburgerBlock.classList.remove("hamburger__block_open");
-    menuList.classList.remove("header__menu-list_mob-activ");
-    menuItem.forEach(item => {
-      item.classList.remove("header__menu-item_mob")
-    })
-    menuLink.forEach(item => {
-      item.classList.remove("header__menu-link_mob")
-    })
-    document.body.classList.remove("lock");
-})
+// таймер
+const deadline = new Date(Date.UTC(2025, 0, 1, 0, 0, 0))
+
+// определение разницы между дедлайном и текущей датой
+function getTimeRemaining(endtime) {
+  let t = Date.parse(endtime) - Date.parse(new Date()); // кол-во миллисекунд в endtime - кол-во миллисекунд текущей даты
+  let days;
+  let hours;
+  let minutes;
+  let seconds;
+  
+  if (t <= 0) { // если дедлайн прошел, присвоиваем данным 0, чтобы при загрузке страницы не отображались отрицательные значения 
+      days = 0;
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+  } else {
+      days = Math.floor(t / (1000 * 60 * 60 * 24));
+      hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      minutes = Math.floor((t / (1000 * 60)) % 60);
+      seconds = Math.floor((t / 1000) % 60);
+  }
+
+  return { // функция возвращает обьект в котором на основе расчетов получены отдельные данные.
+      "total": t,
+      "days": days,
+      "hours": hours,
+      "minutes": minutes,
+      "seconds": seconds
+  };
+}
+// функция установки таймера на странице
+function setClock(endtime) {
+  const timer = document.querySelector(".cta__timer");
+  const days = timer.querySelector("#days");
+  const hours = timer.querySelector("#hours");
+  const minutes = timer.querySelector("#minutes");
+  const seconds = timer.querySelector("#seconds");
+  
+  setInterval(updateClock, 1000);
+
+  updateClock(); //запускается тут, что бы не было скачков при перезагрузке страницы и она начинала действовать с момента загрузки
+
+  function updateClock() {
+      const t = getTimeRemaining(deadline);
+
+      days.innerHTML = t.days;
+      hours.innerHTML = t.hours;
+      minutes.innerHTML = t.minutes;
+      seconds.innerHTML = t.seconds;
+  }
+}
+setClock(deadline)
+

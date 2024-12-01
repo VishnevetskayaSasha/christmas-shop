@@ -252,6 +252,9 @@ html {
   background: #ECF3F8;
   border-radius: 20px;
 }
+.gifts__card_hidden{
+  display: none;
+}
 .gifts__card-img {
   width: 310px;
 }
