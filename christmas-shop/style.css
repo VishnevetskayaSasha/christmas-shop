@@ -188,6 +188,14 @@ html {
   margin-left: 82px;
   overflow: hidden;
 }
+.slider__wrapper{
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.slider__block{
+  display: flex;
+}
 .slider__slider-text {
   font-size: 80px;
   font-weight: 600;
@@ -513,6 +521,7 @@ html {
   align-items: center;
   justify-content: center;
   display: flex;
+  z-index: 1;
 }
 .modal_active{
   left: 0
@@ -534,8 +543,6 @@ html {
   top: 12px;
   right: 12px;
   position: absolute;
-}
-.modal__content-block {
 }
 .modal__img {
   width: 100%;
@@ -586,8 +593,6 @@ html {
   display: flex;
   justify-content: space-between;
 }
-.modal__superpowers-item-snowflake {
-}
 .modal__superpowers-item-snowflake{
   opacity: 0.1;
   width: 16px;
@@ -606,6 +611,9 @@ html {
 }
 .modal__superpowers-item-snowflakes_color5:nth-child(-n+5){
   opacity: 1;
+}
+.link__up{
+  display: none;
 }
 
 @media (hover: hover){
@@ -629,8 +637,12 @@ html {
     cursor: pointer;
     transition: .2s linear;
   }
-  .slider__row-right:hover{
+  .slider__row_active.slider__row-right:hover{
     background-image: url(./img/arrow-right-red.png);
+  }
+  .slider__row_active.slider__row-left:hover{
+    background-image: url(./img/arrow-right-red.png);
+    transform: rotate(180deg);
   }
   .gifts__card:hover .gifts__card-text{
     color: #FF4646;
@@ -837,6 +849,7 @@ html {
   }
   .link__up_active{
     opacity: 1;
+    display: block;
   }
 }
 @media screen and (max-width: 710px){

@@ -184,6 +184,7 @@ function showFilterCards(selectedTag) {
   })
 }
 
+// стрелка вверх
 let arrowUp = document.createElement("a");
 arrowUp.classList.add("link__up");
 arrowUp.setAttribute("href", "#header")
@@ -199,7 +200,10 @@ window.onscroll = function(e) {
     arrowUp.classList.remove("link__up_active");
   }
   //console.info(distance); // В пикселях
+  
 };
+
+
 
 
 
