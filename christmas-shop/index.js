@@ -217,3 +217,76 @@ function closePopup(e) {
     document.body.classList.remove("popup__open");
   }
 }
+
+// слайдер
+const rowRight = document.querySelector(".slider__row-right");
+const rowLift = document.querySelector(".slider__row-left");
+const sliderContent = document.querySelector('.slider__slider-content')
+const sliderWrapper = document.querySelector('.slider__wrapper');
+const slider = document.querySelector(".slider")
+
+let totalWidthWeb = (window.innerWidth <= 950) ? 1993 + 12 : 1993 + 85; // Общая ширина слайдера с учетом отступов
+let visibleWidthWeb = slider.clientWidth; // Ширина видимой части
+//console.log(visibleWidthWeb)
+let currentPosition = 0;
+let shiftAmount = (window.innerWidth <= 768) ? 6 : 3; // Количество сдвигов для прокрутки в одну сторону
+
+// изменение визуала стрелок + marginLeft
+function updateArrows() {
+  if (currentPosition === 0) {
+    rowLift.classList.remove("slider__row_active");
+    if (window.innerWidth <= 950) {
+      sliderContent.style.marginLeft = "8px"
+    } else {
+      sliderContent.style.marginLeft = "82px"
+    }
+  } else {
+    rowLift.classList.add("slider__row_active");
+    sliderContent.style.marginLeft = "0"
+  }
+
+  if (currentPosition <= -(totalWidthWeb - visibleWidthWeb)) {
+    rowRight.classList.remove("slider__row_active");
+    if (window.innerWidth <= 950) {
+      sliderContent.style.marginRight = "8px"
+    } else {
+      sliderContent.style.marginRight = "82px"
+    }
+  } else {
+    rowRight.classList.add("slider__row_active");
+    sliderContent.style.marginRight = "0"
+  }
+}
+
+function slide(direction) {
+  // на сколько должен сдвигаться слайдер при каждом клике на кнопку
+  const shift = direction * ((totalWidthWeb - visibleWidthWeb) / shiftAmount);
+  currentPosition += shift;
+
+  if (currentPosition > 0) {
+    currentPosition = 0;
+  } else if (currentPosition < -(totalWidthWeb - visibleWidthWeb)) {
+    currentPosition = -(totalWidthWeb - visibleWidthWeb);
+  }
+
+  //console.log(currentPosition)
+
+  sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
+  updateArrows();
+}
+
+rowLift.addEventListener('click', () => slide(1)); 
+rowRight.addEventListener('click', () => slide(-1));
+
+window.addEventListener('resize', () => {
+  visibleWidthWeb = slider.clientWidth; // обновляем ширину видимой части
+  //console.log(visibleWidthWeb)
+  totalWidthWeb = (window.innerWidth <= 950) ? 1993 + 12 : 1993 + 85; // обновляем ширину
+  shiftAmount = (window.innerWidth <= 768) ? 6 : 3; //  обновляем количество сдвигов
+  currentPosition = 0; 
+  sliderWrapper.style.transform = `translateX(0px)`;
+  updateArrows();
+});
+
+// Изначальная проверка состояния стрелок
+updateArrows();
