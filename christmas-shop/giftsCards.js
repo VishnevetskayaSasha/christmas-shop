@@ -1,5 +1,6 @@
  const giftCards = [
   {
+    "id": 1,
     "name": "Bug Magnet",
     "description": "Able to find bugs in code like they were placed there on purpose.",
     "category": "For Work",
@@ -14,6 +15,7 @@
   },
 
   {
+    "id": 2,
     "name": "Console.log Guru",
     "description": "Uses console.log like a crystal ball to find any issue.",
     "category": "For Work",
@@ -28,6 +30,7 @@
   },
 
   {
+    "id": 3,
     "name": "Shortcut Cheater",
     "description": "Knows every keyboard shortcut like they were born with them.",
     "category": "For Work",
@@ -42,6 +45,7 @@
   },
 
   {
+    "id": 4,
     "name": "Merge Master",
     "description": "Merges branches in Git without conflicts, like a wizard during an exam.",
     "category": "For Work",
@@ -56,6 +60,7 @@
   },
 
   {
+    "id": 5,
     "name": "Async Tamer",
     "description": "Handles asynchronous code and promises like well-trained pets.",
     "category": "For Work",
@@ -70,6 +75,7 @@
   },
 
   {
+    "id": 6,
     "name": "CSS Tamer",
     "description": "Can make Flexbox and Grid work together like they were always best friends.",
     "category": "For Work",
@@ -84,6 +90,7 @@
   },
 
   {
+    "id": 7,
     "name": "Time Hacker",
     "description": "Writes code at the last moment but always meets the deadline.",
     "category": "For Work",
@@ -98,6 +105,7 @@
   },
 
   {
+    "id": 8,
     "name": "Layout Master",
     "description": "Creates perfect layouts on the first try, like they can read the designer's mind.",
     "category": "For Work",
@@ -112,6 +120,7 @@
   },
 
   {
+    "id": 9,
     "name": "Documentation Whisperer",
     "description": "Understands cryptic documentation as if they wrote it themselves.",
     "category": "For Work",
@@ -126,6 +135,7 @@
   },
 
   {
+    "id": 10,
     "name": "Feedback Master",
     "description": "Accepts client revisions with the Zen calm of Buddha.",
     "category": "For Work",
@@ -140,6 +150,7 @@
   },
 
   {
+    "id": 11,
     "name": "Code Minimalist",
     "description": "Writes code so concise that one line does more than a whole file.",
     "category": "For Work",
@@ -154,6 +165,7 @@
   },
 
   {
+    "id": 12,
     "name": "Pixel-Perfect Magician",
     "description": "Aligns elements to the last pixel, even when the design looks abstract.",
     "category": "For Work",
@@ -168,6 +180,7 @@
   },
 
   {
+    "id": 13,
     "name": "Posture Levitation",
     "description": "Can sit for hours, but maintains perfect posture like a ballerina.",
     "category": "For Health",
@@ -182,6 +195,7 @@
   },
 
   {
+    "id": 14,
     "name": "Step Master",
     "description": "Gets 10,000 steps a day even while sitting at the computer.",
     "category": "For Health",
@@ -196,6 +210,7 @@
   },
 
   {
+    "id": 15,
     "name": "Snack Resister",
     "description": "Ignoring desktop snacks like a strict dietician.",
     "category": "For Health",
@@ -210,6 +225,7 @@
   },
 
   {
+    "id": 16,
     "name": "Hydration Bot",
     "description": "Drinks the recommended 2 liters of water a day like a health-programmed robot.",
     "category": "For Health",
@@ -224,6 +240,7 @@
   },
 
   {
+    "id": 17,
     "name": "Sleep Overlord",
     "description": "Sleeps 6 hours but feels like they had 10.",
     "category": "For Health",
@@ -238,6 +255,7 @@
   },
 
   {
+    "id": 18,
     "name": "Break Guru",
     "description": "Takes a stretch break every hour without forgetting, no matter how focused.",
     "category": "For Health",
@@ -252,6 +270,7 @@
   },
 
   {
+    "id": 19,
     "name": "Eye Protector",
     "description": "Can work all day at the monitor without feeling like their eyes are on fire.",
     "category": "For Health",
@@ -266,6 +285,7 @@
   },
 
   {
+    "id": 20,
     "name": "Stress Dodger",
     "description": "Masters meditation right at the keyboard.",
     "category": "For Health",
@@ -280,6 +300,7 @@
   },
 
   {
+    "id": 21,
     "name": "Yoga Coder",
     "description": "Easily switches from coding to yoga and back.",
     "category": "For Health",
@@ -294,6 +315,7 @@
   },
 
   {
+    "id": 22,
     "name": "Healthy Snacker",
     "description": "Always picks fruit, even when chocolate is within arm’s reach.",
     "category": "For Health",
@@ -308,6 +330,7 @@
   },
 
   {
+    "id": 23,
     "name": "Chair Exerciser",
     "description": "Manages to work out without leaving the chair.",
     "category": "For Health",
@@ -322,6 +345,7 @@
   },
 
   {
+    "id": 24,
     "name": "Caffeine Filter",
     "description": "Drinks coffee at night and still falls asleep with no problem.",
     "category": "For Health",
@@ -336,6 +360,7 @@
   },
 
   {
+    "id": 25,
     "name": "Joy Charger",
     "description": "Finds joy in the little things—even in a build that finishes unexpectedly fast.",
     "category": "For Harmony",
@@ -350,6 +375,7 @@
   },
 
   {
+    "id": 26,
     "name": "Error Laugher",
     "description": "Laughs at code errors like they’re jokes instead of getting angry.",
     "category": "For Harmony",
@@ -364,6 +390,7 @@
   },
 
   {
+    "id": 27,
     "name": "Bug Acceptance Guru",
     "description": "Accepts bugs as part of the journey to perfection — it’s just another task.",
     "category": "For Harmony",
@@ -378,6 +405,7 @@
   },
 
   {
+    "id": 28,
     "name": "Spontaneous Coding Philosopher",
     "description": "Philosophically accepts any client suggestion after a long refactor.",
     "category": "For Harmony",
@@ -392,6 +420,7 @@
   },
 
   {
+    "id": 29,
     "name": "Deadline Sage",
     "description": "Remains zen even when the deadline is close and the project manager is stressed.",
     "category": "For Harmony",
@@ -406,6 +435,7 @@
   },
 
   {
+    "id": 30,
     "name": "Inspiration Maestro",
     "description": "Finds inspiration on an empty screen as if masterpieces are already there.",
     "category": "For Harmony",
@@ -420,6 +450,7 @@
   },
 
   {
+    "id": 31,
     "name": "Peace Keeper",
     "description": "Maintains inner calm even in moments of intense crisis.",
     "category": "For Harmony",
@@ -434,6 +465,7 @@
   },
 
   {
+    "id": 32,
     "name": "Empathy Guru",
     "description": "Feels the team’s mood and can lift everyone’s spirits.",
     "category": "For Harmony",
@@ -448,6 +480,7 @@
   },
 
   {
+    "id": 33,
     "name": "Laughter Generator",
     "description": "Can lighten any tense situation with a joke that even bugs laugh at.",
     "category": "For Harmony",
@@ -462,6 +495,7 @@
   },
 
   {
+    "id": 34,
     "name": "Pause Master",
     "description": "Knows when to just step back from the keyboard and breathe.",
     "category": "For Harmony",
@@ -476,6 +510,7 @@
   },
 
   {
+    "id": 35,
     "name": "Coder Healer",
     "description": "Can support a colleague in their darkest hour, even if it’s a 500 error.",
     "category": "For Harmony",
@@ -490,6 +525,7 @@
   },
 
   {
+    "id": 36,
     "name": "Music Code Curator",
     "description": "Creates work playlists so good, even deadlines follow the rhythm.",
     "category": "For Harmony",
