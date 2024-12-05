@@ -223,11 +223,11 @@ const rowRight = document.querySelector(".slider__row-right");
 const rowLift = document.querySelector(".slider__row-left");
 const sliderContent = document.querySelector('.slider__slider-content')
 const sliderWrapper = document.querySelector('.slider__wrapper');
-const slider = document.querySelector(".slider")
+const slider = document.querySelector(".slider");
+const sliderBlock =  document.querySelector(".slider__block");
 
-let totalWidthWeb = (window.innerWidth <= 950) ? 1993 + 12 : 1993 + 85; // Общая ширина слайдера с учетом отступов
-let visibleWidthWeb = slider.clientWidth; // Ширина видимой части
-//console.log(visibleWidthWeb)
+let totalWidthWeb = sliderBlock.scrollWidth;
+let visibleWidthWeb = (window.innerWidth <= 950) ? slider.clientWidth - 8 : slider.clientWidth - 82;
 let currentPosition = 0;
 let shiftAmount = (window.innerWidth <= 768) ? 6 : 3; // Количество сдвигов для прокрутки в одну сторону
 
@@ -250,7 +250,7 @@ function updateArrows() {
     if (window.innerWidth <= 950) {
       sliderContent.style.marginRight = "8px"
     } else {
-      sliderContent.style.marginRight = "82px"
+     sliderContent.style.marginRight = "82px"
     }
   } else {
     rowRight.classList.add("slider__row_active");
@@ -260,16 +260,13 @@ function updateArrows() {
 
 function slide(direction) {
   // на сколько должен сдвигаться слайдер при каждом клике на кнопку
-  const shift = direction * ((totalWidthWeb - visibleWidthWeb) / shiftAmount);
+  let shift = Math.round(direction * ((totalWidthWeb - visibleWidthWeb) / shiftAmount));
   currentPosition += shift;
-
-  if (currentPosition > 0) {
+  if (currentPosition >= -1) {
     currentPosition = 0;
-  } else if (currentPosition < -(totalWidthWeb - visibleWidthWeb)) {
+  } else if (currentPosition <= -(totalWidthWeb - visibleWidthWeb - 20)) {
     currentPosition = -(totalWidthWeb - visibleWidthWeb);
   }
-
-  //console.log(currentPosition)
 
   sliderWrapper.style.transform = `translateX(${currentPosition}px)`;
   updateArrows();
@@ -279,9 +276,8 @@ rowLift.addEventListener('click', () => slide(1));
 rowRight.addEventListener('click', () => slide(-1));
 
 window.addEventListener('resize', () => {
-  visibleWidthWeb = slider.clientWidth; // обновляем ширину видимой части
-  //console.log(visibleWidthWeb)
-  totalWidthWeb = (window.innerWidth <= 950) ? 1993 + 12 : 1993 + 85; // обновляем ширину
+  totalWidthWeb =  sliderBlock.scrollWidth  // обновляем ширину
+  visibleWidthWeb =  (window.innerWidth <= 950) ? slider.clientWidth - 8 : slider.clientWidth - 82;// Ширина видимой части
   shiftAmount = (window.innerWidth <= 768) ? 6 : 3; //  обновляем количество сдвигов
   currentPosition = 0; 
   sliderWrapper.style.transform = `translateX(0px)`;
